@@ -1,0 +1,114 @@
+# Copyright (c) 2014-2015 Arduino LLC.  All right reserved.
+# Copyright (c) 2020 Blackhand Dynamics SL. All rights reserved.
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+menu.cache=Cache
+menu.speed=CPU Speed
+menu.opt=Optimize
+menu.maxqspi=Max QSPI
+menu.usbstack=USB Stack
+menu.debug=Debug
+
+# DynOSSAT-EDU-OBC (SAMD51)
+# ------------------------------
+dynossat_edu_obc.name=DynOSSAT-EDU-OBC (SAMD51)
+dynossat_edu_obc.vid.0=0x04D8
+dynossat_edu_obc.pid.0=0xEAD2
+dynossat_edu_obc.upload.tool=bossac18
+dynossat_edu_obc.upload.protocol=sam-ba
+dynossat_edu_obc.upload.maximum_size=507904
+dynossat_edu_obc.upload.offset=0x4000
+dynossat_edu_obc.upload.use_1200bps_touch=true
+dynossat_edu_obc.upload.wait_for_upload_port=true
+dynossat_edu_obc.upload.native_usb=true
+dynossat_edu_obc.build.mcu=cortex-m4
+dynossat_edu_obc.build.f_cpu=120000000L
+dynossat_edu_obc.build.usb_product="DynOSSAT-EDU-OBC"
+dynossat_edu_obc.build.usb_manufacturer="BH Dynamics"
+dynossat_edu_obc.build.board=DYNOSSAT_EDU_OBC
+dynossat_edu_obc.build.core=arduino
+dynossat_edu_obc.build.extra_flags=-D__SAMD51J20A__ -DDYNOSSAT_EDU_OBC -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
+dynossat_edu_obc.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+# dynossat_edu_obc.build.openocdscript=openocd_scripts/arduino_zero.cfg
+dynossat_edu_obc.build.variant=dynossat_edu_obc
+dynossat_edu_obc.build.variant_system_lib=
+dynossat_edu_obc.build.vid=0x04D8
+dynossat_edu_obc.build.pid=0xEAD2
+dynossat_edu_obc.bootloader.tool=openocd
+dynossat_edu_obc.bootloader.file=dynossat_edu_obc/bootloader-dynossat_edu_obc-v10.bin
+dynossat_edu_obc.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16 
+dynossat_edu_obc.menu.cache.on=Enabled
+dynossat_edu_obc.menu.cache.on.build.cache_flags=-DENABLE_CACHE
+dynossat_edu_obc.menu.cache.off=Disabled
+dynossat_edu_obc.menu.cache.off.build.cache_flags=
+dynossat_edu_obc.menu.speed.120=120 MHz (standard)
+dynossat_edu_obc.menu.speed.120.build.f_cpu=120000000L
+dynossat_edu_obc.menu.speed.150=150 MHz (overclock)
+dynossat_edu_obc.menu.speed.150.build.f_cpu=150000000L
+dynossat_edu_obc.menu.speed.180=180 MHz (overclock)
+dynossat_edu_obc.menu.speed.180.build.f_cpu=180000000L
+dynossat_edu_obc.menu.speed.200=200 MHz (overclock)
+dynossat_edu_obc.menu.speed.200.build.f_cpu=200000000L
+dynossat_edu_obc.menu.opt.small=Small (-Os) (standard)
+dynossat_edu_obc.menu.opt.small.build.flags.optimize=-Os
+dynossat_edu_obc.menu.opt.fast=Fast (-O2)
+dynossat_edu_obc.menu.opt.fast.build.flags.optimize=-O2
+dynossat_edu_obc.menu.opt.faster=Faster (-O3)
+dynossat_edu_obc.menu.opt.faster.build.flags.optimize=-O3
+dynossat_edu_obc.menu.opt.fastest=Fastest (-Ofast)
+dynossat_edu_obc.menu.opt.fastest.build.flags.optimize=-Ofast
+dynossat_edu_obc.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+dynossat_edu_obc.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+dynossat_edu_obc.menu.usbstack.arduino=Arduino
+dynossat_edu_obc.menu.usbstack.tinyusb=TinyUSB
+dynossat_edu_obc.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+dynossat_edu_obc.menu.debug.off=Off
+dynossat_edu_obc.menu.debug.on=On
+dynossat_edu_obc.menu.debug.on.build.flags.debug=-g
+
+# DynOSSAT-EDU-EPS (SAMD21)
+# ------------------------------
+dynossat_edu_eps.name=DynOSSAT-EDU-EPS (SAMD21)
+dynossat_edu_eps.vid.0=0x04D8
+dynossat_edu_eps.pid.0=0xEAD1
+dynossat_edu_eps.upload.tool=bossac18
+dynossat_edu_eps.upload.protocol=sam-ba
+dynossat_edu_eps.upload.maximum_size=262144
+dynossat_edu_eps.upload.offset=0x2000
+dynossat_edu_eps.upload.use_1200bps_touch=true
+dynossat_edu_eps.upload.wait_for_upload_port=true
+dynossat_edu_eps.upload.native_usb=true
+dynossat_edu_eps.build.mcu=cortex-m0plus
+dynossat_edu_eps.build.f_cpu=48000000L
+dynossat_edu_eps.build.usb_product="DynOSSAT-EDU-EPS"
+dynossat_edu_eps.build.usb_manufacturer="BH Dynamics"
+dynossat_edu_eps.build.board=DYNOSSAT_EDU_OBC
+dynossat_edu_eps.build.core=arduino
+dynossat_edu_eps.build.extra_flags=-DARDUINO_SAMD_ZERO -DDYNOSSAT_EDU_OBC -DARM_MATH_CM0PLUS -Ddynossat_edu_eps -D__SAMD21G18A__ {build.usb_flags}
+dynossat_edu_eps.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+#dynossat_edu_eps.build.openocdscript=openocd_scripts/dynossat_edu_eps.cfg
+dynossat_edu_eps.build.variant=dynossat_edu_eps
+dynossat_edu_eps.build.variant_system_lib=
+dynossat_edu_eps.build.vid=0x04D8
+dynossat_edu_eps.build.pid=0xEAD1
+dynossat_edu_eps.bootloader.tool=openocd
+dynossat_edu_eps.bootloader.file=dynossat_edu_eps/bootloader-dynossat_edu_eps-v10.bin
+dynossat_edu_eps.menu.usbstack.arduino=Arduino
+dynossat_edu_eps.menu.usbstack.tinyusb=TinyUSB
+dynossat_edu_eps.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+dynossat_edu_eps.menu.debug.off=Off
+dynossat_edu_eps.menu.debug.on=On
+dynossat_edu_eps.menu.debug.on.build.flags.debug=-g
