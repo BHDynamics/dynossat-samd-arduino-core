@@ -229,23 +229,31 @@ static const uint8_t SCL = PIN_WIRE_SCL;
 #define PIN_USB_DP          (27ul)
 
 /*
- * I2S Interfaces
+ * I2S Interfaces -> Dummy
  */
 #define I2S_INTERFACES_COUNT 0
 
 #define I2S_DEVICE          0
 #define I2S_CLOCK_GENERATOR 3
 
-#define PIN_I2S_SDO          (11u)
-#define PIN_I2S_SDI          (12u)
-#define PIN_I2S_SCK          PIN_SERIAL1_TX
-#define PIN_I2S_FS           (10u)
-#define PIN_I2S_MCK          PIN_SERIAL1_RX
+#define PIN_I2S_SDO          (0)
+#define PIN_I2S_SDI          (0)
+#define PIN_I2S_SCK          (0)
+#define PIN_I2S_FS           (0)
+#define PIN_I2S_MCK          (0)
 
 // On-board SPI Flash
 #define EXTERNAL_FLASH_DEVICES  GD25Q32C
 #define EXTERNAL_FLASH_USE_SPI  SPI1
 #define EXTERNAL_FLASH_USE_CS   SS1
+
+// QSPI Pins -> Dummy values to enable Adafruit libraries to compile
+#define PIN_QSPI_SCK    (0)
+#define PIN_QSPI_CS     (0)
+#define PIN_QSPI_IO0    (0)
+#define PIN_QSPI_IO1    (0)
+#define PIN_QSPI_IO2    (0)
+#define PIN_QSPI_IO3    (0)
 
 #ifdef __cplusplus
 }
