@@ -112,3 +112,37 @@ dynossat_edu_eps.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
 dynossat_edu_eps.menu.debug.off=Off
 dynossat_edu_eps.menu.debug.on=On
 dynossat_edu_eps.menu.debug.on.build.flags.debug=-g
+
+# DynaLoRa-USB (SAMD21)
+# ------------------------------
+dynossat_edu_eps.name=DynaLoRa-USB (SAMD21)
+dynossat_edu_eps.vid.0=0x04D8
+dynossat_edu_eps.pid.0=0xEA2A
+dynossat_edu_eps.upload.tool=bossac18
+dynossat_edu_eps.upload.protocol=sam-ba
+dynossat_edu_eps.upload.maximum_size=262144
+dynossat_edu_eps.upload.offset=0x2000
+dynossat_edu_eps.upload.use_1200bps_touch=true
+dynossat_edu_eps.upload.wait_for_upload_port=true
+dynossat_edu_eps.upload.native_usb=true
+dynossat_edu_eps.build.mcu=cortex-m0plus
+dynossat_edu_eps.build.f_cpu=48000000L
+dynossat_edu_eps.build.usb_product="DynaLoRa-USB"
+dynossat_edu_eps.build.usb_manufacturer="BH Dynamics"
+dynossat_edu_eps.build.board=DYNALORA_USB
+dynossat_edu_eps.build.core=arduino
+dynossat_edu_eps.build.extra_flags=--DCRYSTALLESS -DDYNALORA_USB -DARM_MATH_CM0PLUS -D__SAMD21E18A__ {build.usb_flags}
+dynossat_edu_eps.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+#dynossat_edu_eps.build.openocdscript=openocd_scripts/dynalora_usb.cfg
+dynossat_edu_eps.build.variant=dynalora_usb
+dynossat_edu_eps.build.variant_system_lib=
+dynossat_edu_eps.build.vid=0x04D8
+dynossat_edu_eps.build.pid=0xEA2A
+dynossat_edu_eps.bootloader.tool=openocd
+dynossat_edu_eps.bootloader.file=dynossat_edu_eps/bootloader-dynalora_usb-v1_0.bin
+dynossat_edu_eps.menu.usbstack.arduino=Arduino
+dynossat_edu_eps.menu.usbstack.tinyusb=TinyUSB
+dynossat_edu_eps.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+dynossat_edu_eps.menu.debug.off=Off
+dynossat_edu_eps.menu.debug.on=On
+dynossat_edu_eps.menu.debug.on.build.flags.debug=-g
