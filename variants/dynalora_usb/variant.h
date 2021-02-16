@@ -195,7 +195,7 @@ static const uint8_t FLASH_CS = SS1 ;
 
 // External header SPI interface
 
-#define PIN_SPI2_MISO         PIN_D2
+#define PIN_SPI2_MISO         PIN_D3
 #define PIN_SPI2_MOSI         PIN_D0
 #define PIN_SPI2_SCK          PIN_D1
 #define PERIPH_SPI2           sercom1
